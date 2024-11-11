@@ -1,0 +1,17 @@
+{
+	"name": "esp-lowcode-matter-v0.6",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"gaesp.vscode-lowcode-web-extension-beta",
+				"gaesp.vscode-lowcode-extension-beta"
+			]
+		},
+		"codespaces": {
+			"openFiles": [
+				"README.md"
+			]
+		}
+	}
+}
