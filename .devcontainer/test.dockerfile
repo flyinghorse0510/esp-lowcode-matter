@@ -26,7 +26,7 @@ ARG ESP_AMP_BRANCH=main
 ARG LOWCODE_BRANCH=main
 
 RUN set -x \
-    && mkdir -p $REPOS_PATH
+    && mkdir -p $REPOS_PATH \
 
     && cd $REPOS_PATH \
     && mkdir esp-idf-release-v5.3 \
