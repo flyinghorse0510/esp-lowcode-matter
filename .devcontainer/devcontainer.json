@@ -1,14 +1,14 @@
 {
 	"name": "esp-lowcode-matter-v0.6",
 	"build": {
-		"dockerfile": "test.dockerfile"
+		"dockerfile": "Dockerfile"
 	},
 	"customizations": {
 		"vscode": {
-			// "extensions": [
-			// 	"GAEsp.vscode-lowcode-extension-beta",
-			// 	"GAEsp.vscode-lowcode-web-extension-beta"
-			// ],
+			"extensions": [
+				"GAEsp.vscode-lowcode-extension-beta",
+				"GAEsp.vscode-lowcode-web-extension-beta"
+			],
 			"settings": {
 				"files.exclude": {
 					"esp-idf-release-v5.3": false,
