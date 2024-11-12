@@ -1,19 +1,12 @@
 {
 	"name": "esp-lowcode-matter-v0.6",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "test.dockerfile"
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta"
-			],
-			"openFiles": [
-				"README.md"
-			]
-		},
-		"codespaces": {
-			"extensions": [
+				"GAEsp.vscode-lowcode-extension-beta",
 				"GAEsp.vscode-lowcode-web-extension-beta"
 			],
 			"openFiles": [
@@ -21,10 +14,10 @@
 			]
 		}
 	},
-	"workspaceFolder": "/workspaces/esp-lowcode-matter",
+	"workspaceFolder": "/home/espressif/esp-lowcode-matter",
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached",
-		"source=${localWorkspaceFolder}/../esp-idf-release-v5.3,target=/home/espressif/esp-idf-release-v5.3,type=bind,consistency=cached",
-		"source=${localWorkspaceFolder}/../esp-amp,target=/home/espressif/esp-amp,type=bind,consistency=cached"
+		"source=/home/espressif/esp-lowcode-matter,target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached",
+		"source=/home/espressif/esp-idf-release-v5.3,target=/home/espressif/esp-idf-release-v5.3,type=bind,consistency=cached",
+		"source=/home/espressif/esp-amp,target=/home/espressif/esp-amp,type=bind,consistency=cached"
 	]
 }
