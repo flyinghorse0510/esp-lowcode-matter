@@ -5,19 +5,21 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta",
-				"GAEsp.vscode-lowcode-web-extension-beta"
-			],
-			"openFiles": [
-				"README.md"
-			]
+			// "extensions": [
+			// 	"GAEsp.vscode-lowcode-extension-beta",
+			// 	"GAEsp.vscode-lowcode-web-extension-beta"
+			// ],
+			"settings": {
+				"files.exclude": {
+					"esp-idf-release-v5.3": false,
+					"esp-amp": false
+				}
+			}
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp-lowcode-matter",
+	"workspaceFolder": "/home/espressif",
 	"mounts": [
-		"source=/home/espressif/esp-lowcode-matter,target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached",
-		"source=/home/espressif/esp-idf-release-v5.3,target=/home/espressif/esp-idf-release-v5.3,type=bind,consistency=cached",
-		"source=/home/espressif/esp-amp,target=/home/espressif/esp-amp,type=bind,consistency=cached"
-	]
+		"source=/workspaces/esp-lowcode-matter,target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached"
+	],
+	"workspaceMount": "source=/workspaces/esp-lowcode-matter,target=/home/espressif,type=bind,consistency=cached"
 }
