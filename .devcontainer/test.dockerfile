@@ -4,7 +4,7 @@ ARG VERSION=latest
 
 RUN set -x \
     && useradd -s /bin/bash -g root -u 1001 -m espressif \
-    && usermod --password $(echo "espressif" | openssl passwd -1 -stdin) espressif \
+    && echo "espressif:espressif" | chpasswd \
     && chown -R espressif /home/espressif/ \
     && : # last line
 
