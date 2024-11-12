@@ -126,16 +126,12 @@ RUN set -x \
     && git clone --single-branch -b $ESP_AMP_BRANCH --depth 1 https://github.com/chiragatal/esp-amp.git \
     && cd esp-amp \
     && git submodule update --init --depth 1 \
-    && ./install.sh \
-    && . ./export.sh \
     && cd .. \
 
     && cd $REPOS_PATH \
     && git clone --single-branch -b $LOWCODE_BRANCH --depth 1 https://github.com/chiragatal/esp-lowcode-matter.git \
     && cd esp-lowcode-matter \
     && git submodule update --init --depth 1 \
-    && ./install.sh \
-    && . ./export.sh \
     && cd .. \
 
     && : # last line
