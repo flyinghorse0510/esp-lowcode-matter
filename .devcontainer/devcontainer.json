@@ -1,17 +1,30 @@
 {
 	"name": "esp-lowcode-matter-v0.6",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"gaesp.vscode-lowcode-web-extension-beta",
-				"gaesp.vscode-lowcode-extension-beta"
+				"GAEsp.vscode-lowcode-extension-beta"
+			],
+			"openFiles": [
+				"README.md"
 			]
 		},
 		"codespaces": {
+			"extensions": [
+				"GAEsp.vscode-lowcode-web-extension-beta"
+			],
 			"openFiles": [
 				"README.md"
 			]
 		}
-	}
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/esp-lowcode-matter,type=bind,consistency=cached",
+	"workspaceFolder": "/workspace/esp-lowcode-matter",
+	"mounts": [
+		"source=${localWorkspaceFolder}/../esp-idf-release-v5.3,target=/workspace/esp-idf-release-v5.3,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/../esp-amp,target=/workspace/esp-amp,type=bind,consistency=cached"
+	]
 }
