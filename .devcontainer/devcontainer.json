@@ -21,10 +21,10 @@
 			]
 		}
 	},
-	"workspaceMount": "source=/home/espressif/esp-lowcode-matter,target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached",
-	"workspaceFolder": "/home/espressif/esp-lowcode-matter",
+	"workspaceFolder": "/workspaces/esp-lowcode-matter",
 	"mounts": [
-		"source=/home/espressif/esp-idf-release-v5.3,target=/home/espressif/esp-idf-release-v5.3,type=bind,consistency=cached",
-		"source=/home/espressif/esp-amp,target=/home/espressif/esp-amp,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder},target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/../esp-idf-release-v5.3,target=/home/espressif/esp-idf-release-v5.3,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/../esp-amp,target=/home/espressif/esp-amp,type=bind,consistency=cached"
 	]
 }
