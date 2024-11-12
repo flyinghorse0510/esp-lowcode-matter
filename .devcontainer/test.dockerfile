@@ -10,7 +10,7 @@ RUN set -x \
 
 USER espressif
 
-WORKDIR /home/espressif
+WORKDIR /home/espressif/esp
 ENV REPOS_PATH=/home/espressif/esp
 ENV IDF_PATH=$REPOS_PATH/esp-idf
 ENV ESP_AMP_PATH=$REPOS_PATH/esp-amp
