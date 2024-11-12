@@ -91,14 +91,14 @@ ARG VERSION=latest
 
 RUN set -x \
     && useradd -s /bin/bash -g root -u 1001 -m espressif \
-    && usermod --password $(echo "espressif" | openssl passwd -1 -stdin) espressif \
+    && echo "espressif:espressif" | chpasswd \
     && chown -R espressif /home/espressif/ \
     && : # last line
 
 USER espressif
 
-WORKDIR /home/espressif
-ENV REPOS_PATH=/home/espressif
+WORKDIR /home/espressif/esp
+ENV REPOS_PATH=/home/espressif/esp
 ENV IDF_PATH=$REPOS_PATH/esp-idf
 ENV ESP_AMP_PATH=$REPOS_PATH/esp-amp
 ENV LOWCODE_PATH=$REPOS_PATH/esp-lowcode-matter
