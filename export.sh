@@ -1,3 +1,18 @@
+#!/bin/bash
+
+set -e
+
+# Function to log messages with color
+log_message() {
+    echo -e "\e[${2:-32}m$1\e[0m"
+}
+
+# Function to handle errors
+handle_error() {
+    log_message "Error: $1" 31
+    exit 1
+}
+
 # Simplify directory names by creating variables
 ZAP_DIR="tools/dependencies/esp-matter/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap"
 ESP_MATTER_DIR="tools/dependencies/esp-matter"

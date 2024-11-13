@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Function to log messages with color
 log_message() {
     echo -e "\e[${2:-32}m$1\e[0m"
