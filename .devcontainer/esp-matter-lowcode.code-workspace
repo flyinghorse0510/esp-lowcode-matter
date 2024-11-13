@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "/home/espressif/esp/esp-matter-lowcode"
+        },
+        {
+            "path": "/home/espressif/esp/esp-amp"
+        },
+        {
+            "path": "/home/espressif/esp/esp-idf"
+        }
+    ]
+}
