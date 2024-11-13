@@ -1,8 +1,6 @@
 {
 	"name": "esp-lowcode-matter-v0.6",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "chiragatal/lowcode:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
