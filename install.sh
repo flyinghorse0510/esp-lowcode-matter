@@ -35,7 +35,7 @@ case $OS in
 esac
 
 # Simplify directory names by creating a variable
-INSTALL_DIR="tools/dependencies/esp-matter/connectedhomeip/connectedhomeip/.environment/cipd/packages"
+INSTALL_DIR="$(dirname "$0")/tools/dependencies/esp-matter/connectedhomeip/connectedhomeip/.environment/cipd/packages"
 
 mkdir -p "$INSTALL_DIR" || handle_error "Failed to create directory $INSTALL_DIR"
 log_message "Installing zap..." 32

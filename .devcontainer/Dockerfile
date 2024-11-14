@@ -99,14 +99,15 @@ USER espressif
 
 WORKDIR /home/espressif/esp
 ENV REPOS_PATH=/home/espressif/esp
-ENV IDF_PATH=$REPOS_PATH/esp-idf
+ENV IDF_PATH=$REPOS_PATH/esp-idf-release-v5.3
 ENV ESP_AMP_PATH=$REPOS_PATH/esp-amp
-ENV LOWCODE_PATH=$REPOS_PATH/esp-lowcode-matter
-ENV LOWCODE_DEPENDENCIES_PATH=$LOWCODE_PATH/tools/dependencies
-ENV ESP_MATTER_PATH=$LOWCODE_DEPENDENCIES_PATH/esp-matter
-ENV ESP_RMAKER_PATH=$LOWCODE_DEPENDENCIES_PATH/esp-rainmaker
-ENV ESP_SECURE_CERT_PATH=$LOWCODE_DEPENDENCIES_PATH/esp_secure_cert_mgr
-ENV MATTER_ONE_PATH=$LOWCODE_DEPENDENCIES_PATH/matter-one
+ENV LOW_CODE_PATH=$REPOS_PATH/esp-lowcode-matter
+ENV LOW_CODE_DEPENDENCIES_PATH=$LOW_CODE_PATH/tools/dependencies
+ENV ESP_MATTER_PATH=$LOW_CODE_DEPENDENCIES_PATH/esp-matter
+ENV ZAP_INSTALL_PATH=$ESP_MATTER_PATH/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap
+ENV ESP_RMAKER_PATH=$LOW_CODE_DEPENDENCIES_PATH/esp-rainmaker
+ENV ESP_SECURE_CERT_PATH=$LOW_CODE_DEPENDENCIES_PATH/esp_secure_cert_mgr
+ENV MATTER_ONE_PATH=$LOW_CODE_DEPENDENCIES_PATH/matter-one
 
 ARG IDF_BRANCH=release/v5.3
 ARG ESP_AMP_BRANCH=main
@@ -118,7 +119,7 @@ RUN set -x \
     && git clone --single-branch -b $IDF_BRANCH --depth 1 https://github.com/espressif/esp-idf.git $idf_repo_name \
     && cd $idf_repo_name \
     && git submodule update --init --depth 1 \
-    && ./install.sh \
+    && ./install.sh esp32c6 \
     && . ./export.sh \
     && cd .. \
 
@@ -136,4 +137,9 @@ RUN set -x \
     && . ./export.sh \
     && cd .. \
 
+    && : # last line
+
+RUN set -x \
+    && echo "source $IDF_PATH/export.sh" >> /home/espressif/.bashrc \
+    && echo "source $LOW_CODE_PATH/export.sh" >> /home/espressif/.bashrc \
     && : # last line

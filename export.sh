@@ -14,8 +14,8 @@ handle_error() {
 }
 
 # Simplify directory names by creating variables
-ZAP_DIR="tools/dependencies/esp-matter/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap"
-ESP_MATTER_DIR="tools/dependencies/esp-matter"
+ESP_MATTER_DIR="$(dirname "$0")/tools/dependencies/esp-matter"
+ZAP_DIR="$ESP_MATTER_DIR/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap"
 
 if [ -f "$ZAP_DIR/zap-cli"* ]; then
   log_message "zap is already installed." 32
