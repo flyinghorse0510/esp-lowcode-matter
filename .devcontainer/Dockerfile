@@ -104,7 +104,7 @@ ARG ESP_AMP_BRANCH=main
 ARG LOWCODE_BRANCH=main
 
 ENV REPOS_PATH=/home/espressif/esp
-ENV IDF_PATH=$REPOS_PATH/esp-idf-$(echo $IDF_BRANCH | sed 's/\//-/g')
+ENV IDF_PATH=$REPOS_PATH/esp-idf-release-v5.3
 ENV ESP_AMP_PATH=$REPOS_PATH/esp-amp
 ENV LOW_CODE_PATH=$REPOS_PATH/esp-lowcode-matter
 ENV LOW_CODE_DEPENDENCIES_PATH=$LOW_CODE_PATH/tools/dependencies

@@ -83,3 +83,4 @@ else
     handle_error "Issue in unzipping the file"
 fi
 
+python3 -m pip install -r "${LOW_CODE_PATH}/tools/mfg/requirements.txt"
