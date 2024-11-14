@@ -4,8 +4,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta",
-				"GAEsp.vscode-lowcode-web-extension-beta"
+				"GAEsp.vscode-lowcode-extension-beta"
 			],
 			"settings": {
 				"files.exclude": {
@@ -13,6 +12,11 @@
 					"esp-amp": false
 				}
 			}
+		},
+		"browser": {
+			"extensions": [
+				"GAEsp.vscode-lowcode-web-extension-beta"
+			]
 		}
 	},
 	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter",
