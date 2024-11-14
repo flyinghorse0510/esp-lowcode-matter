@@ -98,8 +98,13 @@ RUN set -x \
 USER espressif
 
 WORKDIR /home/espressif/esp
+
+ARG IDF_BRANCH=release/v5.3
+ARG ESP_AMP_BRANCH=main
+ARG LOWCODE_BRANCH=main
+
 ENV REPOS_PATH=/home/espressif/esp
-ENV IDF_PATH=$REPOS_PATH/esp-idf-release-v5.3
+ENV IDF_PATH=$REPOS_PATH/esp-idf-$(echo $IDF_BRANCH | sed 's/\//-/g')
 ENV ESP_AMP_PATH=$REPOS_PATH/esp-amp
 ENV LOW_CODE_PATH=$REPOS_PATH/esp-lowcode-matter
 ENV LOW_CODE_DEPENDENCIES_PATH=$LOW_CODE_PATH/tools/dependencies
@@ -108,10 +113,6 @@ ENV ZAP_INSTALL_PATH=$ESP_MATTER_PATH/connectedhomeip/connectedhomeip/.environme
 ENV ESP_RMAKER_PATH=$LOW_CODE_DEPENDENCIES_PATH/esp-rainmaker
 ENV ESP_SECURE_CERT_PATH=$LOW_CODE_DEPENDENCIES_PATH/esp_secure_cert_mgr
 ENV MATTER_ONE_PATH=$LOW_CODE_DEPENDENCIES_PATH/matter-one
-
-ARG IDF_BRANCH=release/v5.3
-ARG ESP_AMP_BRANCH=main
-ARG LOWCODE_BRANCH=main
 
 RUN set -x \
     && cd $REPOS_PATH \
