@@ -2,26 +2,29 @@
 	"name": "esp-lowcode-matter-v0.6",
 	"image": "chiragatal/lowcode:latest",
 	"customizations": {
+		"codespaces": {
+			"openFiles": ["/home/espressif/esp/esp-lowcode-matter/README.md"]
+		},
 		"vscode": {
 			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta"
+				"GAEsp.vscode-lowcode-extension-beta",
+				"GAEsp.vscode-lowcode-web-extension-beta"
 			],
 			"settings": {
 				"files.exclude": {
 					"esp-idf-release-v5.3": false,
 					"esp-amp": false
+				},
+				"remote.extensionKind": {
+					"GAEsp.vscode-lowcode-extension-beta": [ "workspace" ],
+					"GAEsp.vscode-lowcode-web-extension-beta": [ "ui" ]
 				}
 			}
-		},
-		"browser": {
-			"extensions": [
-				"GAEsp.vscode-lowcode-web-extension-beta"
-			]
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp-lowcode-matter",
+	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter",
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder},target=/home/espressif/esp/esp-lowcode-matter,type=bind,consistency=cached"
 	],
 	"remoteUser": "espressif"
 }
