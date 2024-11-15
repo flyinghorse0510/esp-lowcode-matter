@@ -3,7 +3,17 @@
 	"image": "chiragatal/lowcode:latest",
 	"customizations": {
 		"codespaces": {
-			"openFiles": ["/home/espressif/esp/esp-lowcode-matter/README.md"]
+			"openFiles": ["/home/espressif/esp/esp-lowcode-matter/README.md"],
+			"settings": {
+				"files.exclude": {
+					"esp-idf-release-v5.3": false,
+					"esp-amp": false
+				},
+				"remote.extensionKind": {
+					"GAEsp.vscode-lowcode-extension-beta": [ "workspace" ],
+					"GAEsp.vscode-lowcode-web-extension-beta": [ "ui" ]
+				}
+			}
 		},
 		"vscode": {
 			"extensions": [
