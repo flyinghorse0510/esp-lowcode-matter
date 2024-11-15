@@ -19,9 +19,9 @@
 			]
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter",
+	"workspaceFolder": "/home/espressif/esp-lowcode-matter",
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/home/espressif/esp/esp-lowcode-matter,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder},target=/home/espressif/esp-lowcode-matter,type=bind,consistency=cached"
 	],
 	"remoteUser": "espressif"
 }
