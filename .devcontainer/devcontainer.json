@@ -4,6 +4,10 @@
 	"customizations": {
 		"codespaces": {
 			"openFiles": ["/home/espressif/esp/esp-lowcode-matter/README.md"],
+			"extensions": [
+				"GAEsp.vscode-lowcode-extension-beta",
+				"GAEsp.vscode-lowcode-web-extension-beta"
+			],
 			"settings": {
 				"files.exclude": {
 					"esp-idf-release-v5.3": false,
@@ -11,15 +15,14 @@
 				},
 				"remote.extensionKind": {
 					"GAEsp.vscode-lowcode-extension-beta": [ "workspace" ],
-					"GAEsp.vscode-lowcode-web-extension-beta": [ "ui" ]
+					"GAEsp.vscode-lowcode-web-extension-beta": [ "web" ]
 				}
 			}
 		},
 		"vscode": {
 			"extensions": [
 				"GAEsp.vscode-lowcode-extension-beta",
-				"GAEsp.vscode-lowcode-web-extension-beta",
-				"espressif.esp-idf-web"
+				"GAEsp.vscode-lowcode-web-extension-beta"
 			],
 			"settings": {
 				"files.exclude": {
