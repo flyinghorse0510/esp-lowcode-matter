@@ -18,7 +18,8 @@
 		"vscode": {
 			"extensions": [
 				"GAEsp.vscode-lowcode-extension-beta",
-				"GAEsp.vscode-lowcode-web-extension-beta"
+				"GAEsp.vscode-lowcode-web-extension-beta",
+				"espressif.esp-idf-web"
 			],
 			"settings": {
 				"files.exclude": {
