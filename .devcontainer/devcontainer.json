@@ -4,10 +4,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				// "GAEsp.vscode-lowcode-extension-beta",
-				// "GAEsp.vscode-lowcode-web-extension-beta",
-				"espressif.esp-idf-web",
-				"ms-vscode.remote-explorer"
+				"GAEsp.vscode-lowcode-extension-beta"
 			],
 			"settings": {
 				"files.exclude": {
@@ -17,7 +14,7 @@
 			}
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp/",
+	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter",
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/home/espressif/esp/esp-lowcode-matter,type=bind,consistency=cached"
 	],
