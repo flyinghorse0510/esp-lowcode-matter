@@ -2,41 +2,24 @@
 	"name": "esp-lowcode-matter-v0.6",
 	"image": "chiragatal/lowcode:latest",
 	"customizations": {
-		"codespaces": {
-			"openFiles": ["/home/espressif/esp/esp-lowcode-matter/README.md"],
-			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta",
-				"GAEsp.vscode-lowcode-web-extension-beta"
-			],
-			"settings": {
-				"files.exclude": {
-					"esp-idf-release-v5.3": false,
-					"esp-amp": false
-				},
-				"remote.extensionKind": {
-					"GAEsp.vscode-lowcode-extension-beta": [ "workspace" ],
-					"GAEsp.vscode-lowcode-web-extension-beta": [ "web" ]
-				}
-			}
-		},
 		"vscode": {
 			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta",
+				"GAEsp.vscode-lowcode-extension-beta"
+			]
+			// "settings": {
+			// 	"files.exclude": {
+			// 		"esp-idf-release-v5.3": false,
+			// 		"esp-amp": false
+			// 	}
+			// }
+		},
+		"browser": {
+			"extensions": [
 				"GAEsp.vscode-lowcode-web-extension-beta"
-			],
-			"settings": {
-				"files.exclude": {
-					"esp-idf-release-v5.3": false,
-					"esp-amp": false
-				},
-				"remote.extensionKind": {
-					"GAEsp.vscode-lowcode-extension-beta": [ "workspace" ],
-					"GAEsp.vscode-lowcode-web-extension-beta": [ "ui" ]
-				}
-			}
+			]
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter",
+	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter/.devcontainer/lowcode.code-workspace",
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/home/espressif/esp/esp-lowcode-matter,type=bind,consistency=cached"
 	],
