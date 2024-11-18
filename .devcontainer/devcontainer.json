@@ -6,7 +6,8 @@
 			"extensions": [
 				// "GAEsp.vscode-lowcode-extension-beta",
 				// "GAEsp.vscode-lowcode-web-extension-beta",
-				"espressif.esp-idf-web"
+				"espressif.esp-idf-web",
+				"ms-vscode.remote-explorer"
 			],
 			"settings": {
 				"files.exclude": {
