@@ -4,19 +4,16 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GAEsp.vscode-lowcode-extension-beta"
-			]
-			// "settings": {
-			// 	"files.exclude": {
-			// 		"esp-idf-release-v5.3": false,
-			// 		"esp-amp": false
-			// 	}
-			// }
-		},
-		"browser": {
-			"extensions": [
-				"GAEsp.vscode-lowcode-web-extension-beta"
-			]
+				// "GAEsp.vscode-lowcode-extension-beta",
+				// "GAEsp.vscode-lowcode-web-extension-beta",
+				"espressif.esp-idf-web"
+			],
+			"settings": {
+				"files.exclude": {
+					"esp-idf-release-v5.3": false,
+					"esp-amp": false
+				}
+			}
 		}
 	},
 	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter/.devcontainer/lowcode.code-workspace",
