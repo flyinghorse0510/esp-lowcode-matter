@@ -16,7 +16,7 @@
 			}
 		}
 	},
-	"workspaceFolder": "/home/espressif/esp/esp-lowcode-matter/.devcontainer/lowcode.code-workspace",
+	"workspaceFolder": "/home/espressif/esp/",
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/home/espressif/esp/esp-lowcode-matter,type=bind,consistency=cached"
 	],
