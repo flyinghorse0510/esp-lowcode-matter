@@ -1,78 +1,47 @@
 # Low Code: LP Core
 
-## Setup
+## Get Started
 
-Clone the repositories.
+### Start Codespace
 
-```sh
-cd esp-matter-lowcode
-git submodule update --init --recursive
-cd ..
-```
+- Go to [esp-matter-lowcode](https://github.com/espressif/esp-matter-lowcode/)
+- Click on "Code"
+- Click on "Codespaces"
+- Click on "Create Codespace on Main"
+- This will take about 5 minutes to setup and install
+- In the process, the codespace will restart a few times
 
-```sh
-git clone -b release/v5.3 https://github.com/espressif/esp-idf.git --recursive
-cd esp-idf
-export ESP_IDF_PATH=$(pwd)/esp-idf
-./install.sh
-. ./export.sh
-cd ..
-```
+### Installing Extensions
 
-```sh
-git clone --single-branch -b feature/matter-file-parsing --depth 1 https://github.com/espressif/esp-matter.git
-cd esp-matter
-export ESP_MATTER_PATH=$(pwd)/esp-matter
-git submodule update --init --depth 1
-cd connectedhomeip/connectedhomeip
-./scripts/checkout_submodules.py --platform esp32 linux --shallow
-cd ..
-./install.sh
-. ./export.sh
-cd ..
-```
+- Click on the extensions icon on the left sidebar
+- Search for "Matte LowCode Web"
+- Click on "Install"
 
-```sh
-git clone -b development https://github.com/espressif/esp-amp.git
-cd esp-amp
-export ESP_AMP_PATH=$(pwd)/esp-amp
-git submodule update --init --recursive
-cd ..
-```
+### Start Creating
 
-## Pre-built Binaries
+There are a few commands avaliable with "Lowcode:" prefix. There are also buttons on the bottom of the screen.
 
-Flash the pre-built binaries to the device.
+- Select Product: Start by selecting the product that you want to create
 
-```sh
-cd pre_built_binaries
-esptool.py erase_flash
-esptool.py write_flash $(cat flash_args)
-```
+These needs to be done only once for each device. But needs to be done separately for each device.
 
-## Per device configuration
+- Select Port: Connect your esp32c6 board to your computer via USB, and select the port
+- Flash Prebuilt Binaries: Flash the prebuilt binaries to your esp32c6 board
+- Generate Per Device Data: Generate the required device certificates and the qr code for the device
+- Flash Per Device Data: Flash the generated device certificates and qr code data
+- QR Code: Open the QR code in a new tab
 
-```sh
-cd tools/mfg
-./mfg_low_code.sh ../../products/light
-```
+> Note: The QR code is only available when the product side code is flashed to the device.
 
-## Build
+The product side code being light weight, the edit, build, debug cycle is fast.
 
-```sh
-cd products/light
-idf.py set-target esp32c6
-idf.py build
-```
+- Build: Build the selected product
+- Flash: Flash the built product to your esp32c6 board
+- Console: Open the device console to view the logs
 
-## Flash
+Some other commands to help with development:
 
-```sh
-esptool.py write_flash 0x20C000 build/subcore_light.subcore.bin
-```
-
-## Monitor
-
-```sh
-python3 -m esp_idf_monitor
-```
+- Setup: Setup the complete development environment
+- Erase Flash: Erase the flash storage
+- Menuconfig: Open the menuconfig for the selected product
+- Product Clean: Clean the build system
