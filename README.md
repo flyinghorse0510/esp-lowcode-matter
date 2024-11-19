@@ -4,7 +4,7 @@
 
 ### Start Codespace
 
-- Go to [esp-matter-lowcode](https://github.com/espressif/esp-matter-lowcode/)
+- Go to <https://github.com/chiragatal/esp-lowcode-matter/>
 - Click on "Code"
 - Click on "Codespaces"
 - Click on "Create Codespace on Main"
