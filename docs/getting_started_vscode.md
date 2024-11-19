@@ -1,21 +1,18 @@
 # Low Code: LP Core
 
-## Get Started
-
-### Start Codespace
-
-- Go to [esp-matter-lowcode](https://github.com/espressif/esp-matter-lowcode/)
-- Click on "Code"
-- Click on "Codespaces"
-- Click on "Create Codespace on Main"
-- This will take about 5 minutes to setup and install
-- In the process, the codespace will restart a few times
+## Using VSCode
 
 ### Installing Extensions
 
 - Click on the extensions icon on the left sidebar
-- Search for "Matter LowCode Web"
+- Search for "Matter LowCode"
 - Click on "Install"
+
+### Setup
+
+- Setup: Click on the "Setup" button on the bottom of the screen.
+- This will clone the required repositories and install the dependencies and tools.
+- This might take upto 30 minutes to complete.
 
 ### Start Creating
 
@@ -41,7 +38,6 @@ The product side code being light weight, the edit, build, debug cycle is fast.
 
 Some other commands to help with development:
 
-- Setup: Setup the complete development environment
 - Erase Flash: Erase the flash storage
 - Menuconfig: Open the menuconfig for the selected product
 - Product Clean: Clean the build system
