@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 # Function to handle errors
 handle_error() {
     echo "Error: $1"
