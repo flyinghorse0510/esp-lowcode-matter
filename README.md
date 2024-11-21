@@ -8,14 +8,8 @@
 - Click on "Code"
 - Click on "Codespaces"
 - Click on "Create Codespace on Main"
-- This will take about 5 minutes to setup and install
+- This will take about 10 minutes to setup and install
 - In the process, the codespace will restart a few times
-
-### Installing Extensions
-
-- Click on the extensions icon on the left sidebar
-- Search for "Matter LowCode Web"
-- Click on "Install"
 
 ### Start Creating
 
