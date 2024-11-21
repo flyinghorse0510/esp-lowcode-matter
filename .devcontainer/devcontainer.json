@@ -12,7 +12,11 @@
 					"esp-amp": false
 				},
 				"extensions.ignoreRecommendations": true
-			}
+			},
+			"openFiles": [
+				"/home/espressif/esp/esp-lowcode-matter/README.md",
+				"/home/espressif/esp/esp-lowcode-matter/products/light/main/app_main.cpp"
+			]
 		},
 		"codespaces": {
 			"openFiles": [
