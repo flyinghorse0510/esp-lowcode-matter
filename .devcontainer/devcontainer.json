@@ -39,7 +39,24 @@
 
 	"postStartCommand": ". /workspace/esp-idf/export.sh && . /workspace/esp-lowcode-matter/export.sh",
 
+	"containerEnv": {
+		"IDF_PATH": "/workspace/esp-idf",
+		"ESP_AMP_PATH": "/workspace/esp-amp",
+		"LOW_CODE_PATH": "/workspace/esp-lowcode-matter",
+		"ESP_MATTER_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp-matter",
+		"ZAP_INSTALL_PATH": "$ESP_MATTER_PATH/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap",
+		"ESP_RMAKER_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp-rainmaker",
+		"ESP_SECURE_CERT_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp_secure_cert_mgr",
+		"MATTER_ONE_PATH": "workspace/esp-lowcode-matter/tools/dependencies/matter-one"
+	},
 	"remoteEnv": {
-		"ESP_AMP_PATH": "/workspace/esp-amp"
+		"IDF_PATH": "/workspace/esp-idf",
+		"ESP_AMP_PATH": "/workspace/esp-amp",
+		"LOW_CODE_PATH": "/workspace/esp-lowcode-matter",
+		"ESP_MATTER_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp-matter",
+		"ZAP_INSTALL_PATH": "$ESP_MATTER_PATH/connectedhomeip/connectedhomeip/.environment/cipd/packages/zap",
+		"ESP_RMAKER_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp-rainmaker",
+		"ESP_SECURE_CERT_PATH": "workspace/esp-lowcode-matter/tools/dependencies/esp_secure_cert_mgr",
+		"MATTER_ONE_PATH": "workspace/esp-lowcode-matter/tools/dependencies/matter-one"
 	}
 }
