@@ -32,13 +32,7 @@
 	"workspaceFolder": "/workspace/esp-lowcode-matter",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/esp-lowcode-matter,type=bind",
 	"remoteUser": "root",
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/devcontainers/features/cmake:1": {},
-		"ghcr.io/devcontainers/features/node:1": {}
-	},
-	"onCreateCommand": "apt-get update && apt-get install -y git wget flex bison gperf python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0",
+	"onCreateCommand": "apt-get update && apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0",
 	"postCreateCommand": "cd /workspace && git clone --depth 1 https://github.com/espressif/esp-idf.git -b release/v5.3 && git clone --depth 1 https://github.com/chiragatal/esp-amp.git -b main",
 	"postStartCommand": "cd /workspace/esp-idf && ./install.sh esp32c6 && . ./export.sh && cd /workspace/esp-lowcode-matter && ./install.sh && . ./export.sh"
 }
