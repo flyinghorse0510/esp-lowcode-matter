@@ -33,13 +33,6 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/esp-lowcode-matter,type=bind",
 	"remoteUser": "root",
 	"onCreateCommand": "apt-get update && apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 libcairo2-dev",
-	"postCreateCommand": [
-		"cd /workspace && git clone --depth 1 https://github.com/espressif/esp-idf.git -b release/v5.3 && cd esp-idf && git submodule update --init && ./install.sh",
-		"cd /workspace && git clone --depth 1 https://github.com/chiragatal/esp-amp.git -b main && cd esp-amp && export ESP_AMP_PATH=/workspace/esp-amp",
-		"cd /workspace/esp-lowcode-matter && ./install.sh"
-	],
-	"postStartCommand": [
-		". /workspace/esp-idf/export.sh",
-		". /workspace/esp-amp/export.sh"
-	]
+	"postCreateCommand": "cd /workspace && git clone --depth 1 https://github.com/espressif/esp-idf.git -b release/v5.3 && cd esp-idf && git submodule update --init && ./install.sh && cd /workspace && git clone --depth 1 https://github.com/chiragatal/esp-amp.git -b main && cd esp-amp && export ESP_AMP_PATH=/workspace/esp-amp && cd /workspace/esp-lowcode-matter && ./install.sh",
+	"postStartCommand": ". /workspace/esp-idf/export.sh && . /workspace/esp-amp/export.sh"
 }
