@@ -33,32 +33,14 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/esp-lowcode-matter,type=bind",
 	"remoteUser": "root",
 
-	// Initialize system and install dependencies
-	"initializeCommand": {
-		"update-system": "mkdir -p /workspace"
-	},
-
 	// Install packages
-	"onCreateCommand": [
-		"bash",
-		"-c",
-		"apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 libcairo2-dev"
-	],
+	"onCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 libcairo2-dev",
 
 	// Setup ESP-IDF and ESP-AMP
-	"postCreateCommand": {
-		"1-clone-esp-idf": "cd /workspace && git clone --depth 1 https://github.com/espressif/esp-idf.git -b release/v5.3",
-		"2-init-esp-idf": "cd /workspace/esp-idf && git submodule update --init && ./install.sh esp32c6 && . ./export.sh",
-		"3-clone-esp-amp": "cd /workspace && git clone --depth 1 https://github.com/chiragatal/esp-amp.git -b main",
-		"4-setup-esp-amp": "cd /workspace/esp-amp && export ESP_AMP_PATH=/workspace/esp-amp",
-		"5-setup-project": "cd /workspace/esp-lowcode-matter && ./install.sh && . ./export.sh"
-	},
+	"postCreateCommand": "cd /workspace && git clone --depth 1 https://github.com/espressif/esp-idf.git -b release/v5.3 && cd /workspace/esp-idf && git submodule update --init && ./install.sh esp32c6 && . ./export.sh && git clone --depth 1 https://github.com/chiragatal/esp-amp.git -b main && cd /workspace/esp-amp && export ESP_AMP_PATH=/workspace/esp-amp && cd /workspace/esp-lowcode-matter && ./install.sh && . ./export.sh",
 
 	// Environment setup on start
-	"postStartCommand": {
-		"1-esp-idf-env": ". /workspace/esp-idf/export.sh",
-		"2-project-env": ". /workspace/esp-lowcode-matter/export.sh"
-	},
+	"postStartCommand": ". /workspace/esp-idf/export.sh && . /workspace/esp-lowcode-matter/export.sh",
 
 	"remoteEnv": {
 		"ESP_AMP_PATH": "/workspace/esp-amp"
