@@ -15,11 +15,11 @@
 #include <stdio.h>
 
 #include <light_driver.h>
-
+#include "soc/gpio_num.h"
 #include <app_driver.h>
 
-#define COLD_CHANNEL_IO 4
-#define WARM_CHANNEL_IO 6
+#define COLD_CHANNEL_IO ((gpio_num_t)(4))
+#define WARM_CHANNEL_IO ((gpio_num_t)(6))
 
 static const char *TAG = "app_driver";
 
@@ -27,7 +27,7 @@ int app_driver_init()
 {
     printf("%s: Initializing light driver\n", TAG);
     light_driver_config_t cfg = {
-        .device_type = LIGHT_DEVICE_TYPE_LED,
+        .device_type = LIGHT_DEVICE_TYPE_WS2812,
         .channel_comb = LIGHT_CHANNEL_COMB_2CH_CW,
         .io_conf = {
             .led_io = {
@@ -48,7 +48,7 @@ int app_driver_init()
 int app_driver_set_light_state(bool state)
 {
     printf("%s: Setting light state: %s\n", TAG, state ? "ON" : "OFF");
-    return light_driver_set_power(state);
+    return light_driver_set_power((uint8_t)(state));
 }
 
 int app_driver_set_light_brightness(uint8_t brightness)
